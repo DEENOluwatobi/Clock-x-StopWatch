@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+section{
+    background: linear-gradient(to right, 
+    rgb(242, 196, 198), rgba(106, 226, 232, 0.696));
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+section::after{
+    content:'';
+    width: 200px;
+    height: 200px;
+    background-color: rgba(222, 94, 122, 0.868);
+    position:absolute;
+    border-radius: 10px;
+    top: 60%;
+    right: 20%;
+    animation: animate 5s ease-in-out infinite;
+}
+section::before{
+    content:'';
+    width: 200px;
+    height: 200px;
+    background-color: rgba(16, 173, 182, 0.696);
+    border-radius: 10px;
+    position:absolute;
+    bottom: 60%;
+    left: 20%;
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+@keyframes animate{
+    0%,100%{
+        transform: translateY(50px)
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+}
+
+section .box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(212, 224, 79, 0.868);
+    position:absolute;
+    border-radius: 10px;
+    right: 65%;
+    bottom: 20%;
+    animation: slide 5s ease-in-out infinite;
+}
+section .box2{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(16, 182, 16, 0.696);
+    border-radius: 10px;
+    position:absolute;
+    left: 65%;
+    top: 20%;
+    animation: slide 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+@keyframes slide{
+    0%,100%{
+        transform: translateX(50px)
+    }
+    50%{
+        transform: translateX(-50px);
+    }
+}
+
+.watch-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.watch-body .watch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.watch-body .watch h2{
+    font-size: 4em;
+    color: darkslategray;
+}
+.watch-body .watch h2:nth-child(odd){
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 5px;
+    margin: 0 2px;
+}
+.watch-body .watch .seconds{
+    color: rgba(240, 51, 57, 0.868);
+}
+.ampm{
+    font-weight: bold;
+    position: absolute;
+    top: 42%;
+    right: 18%;
+}
+
+/* STOPWATCH */
+.stopwatch{
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(65, 63, 63, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+}
+.stopwatch .sw-timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stopwatch .sw-timer h3{
+    font-size: 2.5em;
+    padding: 5px;
+    margin: 2px;
+    color: darkslategray;
+}
+.stopwatch .sw-timer h3:nth-child(odd){
+    background: rgba(43, 209, 215, 0.2);
+    box-shadow: 0 15px 25px rgba(63, 65, 65, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+} 
+.stopwatch .sw-timer .sw-millsecs{
+    color: rgba(16, 173, 182, 0.996);
+}
+.stopwatch .sw-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.stopwatch .sw-buttons button{
+    padding: 5px 10px;
+    margin: 5px 20px;
+    outline: none;
+    font-size: 1em;
+    font-family: calibri;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgba(9, 132, 137, 0.8);
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
