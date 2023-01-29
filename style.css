@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Trebuchet MS', sans-serif;
 }
+@media  only screen and (max-width: 1200px) {
 
     section{
         background: linear-gradient(to right, 
@@ -174,4 +175,47 @@
         background-color: transparent;
         cursor: pointer;
     }
+}
 
+/* SMALL SCREENS */
+@media only screen and (max-width: 600px) {
+    section::after, section::before, section .box1, section .box2{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .watch-body{
+        width: 80%;
+        height: 400px;
+    }
+    .watch-body .watch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .watch-body .watch h2{
+        font-size: 3em;
+    }
+    .ampm{
+        right:0%;
+    }
+    
+    /* STOPWATCH */
+    .stopwatch .sw-timer h3{
+        font-size: 2em;
+        margin: .5px;
+    }
+    .stopwatch .sw-timer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .stopwatch .sw-timer h3{
+        font-size: 1.2em;
+    }
+    .stopwatch .sw-buttons button{
+        padding: 5px;
+        margin: 5px;
+    }
+}
