@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Trebuchet MS', sans-serif;
 }
-@media  only screen and (max-width: 1200px) {
+@media  only screen and (max-width: 2400px) {
 
     section{
         background: linear-gradient(to right, 
